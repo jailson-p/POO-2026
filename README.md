@@ -1,3 +1,5 @@
+![GitHub License](https://img.shields.io/github/license/jailson-p/POO-2026)
+
 # Atividades práticas da disciplina de
 Programação Orientada a Objetos
 
