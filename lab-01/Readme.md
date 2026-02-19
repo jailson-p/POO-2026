@@ -9,10 +9,10 @@ git --global user.email "e-mail@email"
 ```
 
 ### Configuração de nome de usuário e e-mail no Git
-### Criando Personal Access Token (PAT) no GitHub
+### Criando Personal Access Token (PAT) no GitHub<sup>&reg;</sup>
 É uma forma de autenticação por _Token_ para validar a credencial, podendo ter restrições bem refinadas e adequadas para as credenciais, compostas de caracteres alfanuméricos, podendo ter mais de 36 caracteres se torna eficiente, gerenciável, prático e robusto.
 
-#### Passos para criar uma PAT no GitHub
+#### Passos para criar uma PAT no GitHub<sup>&reg;</sup>
 1. Acesse as Configurações: No canto superior direito do GitHub, clique na sua foto de perfil e selecione Settings.  
 2. Developer Settings: No menu lateral esquerdo, role até o final e clique em Developer settings.  
 3. Tokens (classic): Clique em Personal access tokens e depois em Tokens (classic).  
@@ -24,4 +24,10 @@ git --global user.email "e-mail@email"
 9. Copiar e Salvar: O código (ex: ghp_...) aparecerá na tela. Copie-o agora, pois após sair dessa página você nunca mais conseguirá vê-lo.
 
 ### Salvar em cache as credenciais na PAT
+É necessário para que a atividade de versionamento e atualização da prudução do código seja rápida, sem entraves de busca de chaves para "subir" o código para o GitHub<sup>&reg;</sup>, assim trazendo conveniência, segurança e automação. O exemplo a seguir seria para manter as credenciais em _cache_ por 1 hora (3600s).
+```bash
+git config --global credential.helper 'cache --timeout=3600'
+```
+Somente no próximo git pull ou push será requisitado o nome do usuário e o PAT, ficarão estes na cache pelo tempo solicitado. Após o tempo findar será necessário voltar à usar o PAT para as ações de do git pull ou push.
+
 ## Qual a diferença entre git merge e git rebase?
