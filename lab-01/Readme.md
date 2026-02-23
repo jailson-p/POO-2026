@@ -28,6 +28,12 @@ git --global user.email "e-mail@email"
 ```bash
 git config --global credential.helper 'cache --timeout=3600'
 ```
-Somente no próximo git pull ou push será requisitado o nome do usuário e o PAT, ficarão estes na cache pelo tempo solicitado. Após o tempo findar será necessário voltar à usar o PAT para as ações de do git pull ou push.
+Somente no próximo _git pull_ ou _push_ será requisitado o nome do usuário e o PAT, ficarão estes na cache pelo tempo solicitado. Após o tempo findar será necessário voltar à usar o PAT para as ações de do _git pull_ ou _push_.
 
 ## Qual a diferença entre git merge e git rebase?
+De uma maneira simplificada pode-se dizer que o _git merge_ mantém ramificações (_branches_) no versionamento do código, uma utilidade para isso é tendo um código já em funcionamento, porém há uma necessidade de otimização em trechos, mantém-se o que já foi feito em uma versão paralela se edita os códigos de interesse. Na opção _git rebase_ não há versão paralela, o ramo (_branch_) é substituído e a descontinuidade também.
+
+![Git merg vs Git rebase](Imagens/GitMergeVsGitRebase.png "Título opcional")
+*Figura 1: Representação visual do merge e rebase da branch Feature na Main.*
+
+O uso do git _merge_, em uma dinâmica coperativa, trás benefícios de fundir os vercionamentos,criar ramos para testes de novos trechos, criar ramos de otimização do código e correção de erros, enquanto o _rebase_ define a linha única e principal da versão, útil para definir um novo ponto de "partida". 
