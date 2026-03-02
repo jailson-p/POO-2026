@@ -29,12 +29,7 @@ void main(){
     };
     IO.println(n);
 
-    int[][] identidade = new int[][] {{1,0,0},{0,1,0},{0,0,1}};
+    //Sint[][] identidade = new int[][] {{1,0,0},{0,1,0},{0,0,1}};
 
-    for (int[] js : identidade) {
-        if (js == 1) {
-            
-        };
-    }
-
+    
 }
