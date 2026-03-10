@@ -1,1 +1,0 @@
-rootProject.name = "Tarefa-01"
