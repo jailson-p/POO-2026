@@ -3,7 +3,7 @@ package engetelecom.poo;
 public class Main {
     static void main(String[] args) {
 
-        String respostaArgError =   "Forma incorreta de argumento.\n" + "Forneça o argumento da seguinte forma:\n" + "\t\ttriangulo n°\n" + "\t\tlosango nº\n" + "\t\tretangulo nº nº";
+        String respostaArgError =   "Forma incorreta de argumento.\nForneça o argumento da seguinte forma:\n\t\ttriangulo n°\n\t\tlosango nº\n\t\tretangulo nº nº";
 
         //Teste de tamanho mínimo para o argumento
         if( args.length < 2 ){
@@ -11,9 +11,9 @@ public class Main {
             return;
         }
 
-        String tipo = new String(args[0]);
+        String tipo = args[0];
 
-        int dimensao[] = new int[args.length-1] ;
+        int[] dimensao = new int[args.length-1] ;
         //Valida e distribui no vetor dimensao
         for (int i = 1; i < args.length; i++) {
             if (args[i].matches("-?\\d+"))
@@ -26,7 +26,9 @@ public class Main {
 
         switch (tipo.toLowerCase()){
             case "triangulo":
-				for(int i = 0;i < dimensao[0];i++)IO.println("*".repeat(i+1));
+                IO.println("java AsciiArt " + tipo.toLowerCase() + " " + dimensao[0] + "\n");
+                for(int i = 0;i < dimensao[0];i++) IO.println("*".repeat(i+1));
+                IO.println();
                 break;
 			case "losango":
                 int meio = dimensao[0]/2;
@@ -35,7 +37,7 @@ public class Main {
                 StringBuffer losango = new StringBuffer();
                 for (int i = 0; i < dimensao[0]; i++) {
                     if(i == 0){
-                        textopass.append("\s".repeat(meio) + "*" + "\s".repeat(meio));
+                        textopass.append(" ".repeat(meio)).append("*").append(" ".repeat(meio));
                     }
                     // sai da condicional quando atigir o meio de um tamanho par e repete a última carga do textopass
                     else if(i == meio && par) {}
@@ -44,25 +46,28 @@ public class Main {
                         textopass.setCharAt(textopass.lastIndexOf("*")+1,'*');
                     }
                     else {
-                        textopass.setCharAt(textopass.indexOf("*"),'\s');
-                        textopass.setCharAt(textopass.lastIndexOf("*"),'\s');
+                        textopass.setCharAt(textopass.indexOf("*"), ' ');
+                        textopass.setCharAt(textopass.lastIndexOf("*"),' ');
                     }
-                    losango.append(textopass + "\n");
+                    losango.append(textopass).append("\n");
                 }
+                IO.println("java AsciiArt " + tipo.toLowerCase() + " " + dimensao[0] + "\n");
+
                 IO.println(losango.toString());
 				break;
 			case "retangulo":
                 StringBuffer retangulo = new StringBuffer();
                 for (int i = 0; i < dimensao[1]; i++) {
                     if(i == 0 || i == dimensao[1]-1)
-                        retangulo.append("*".repeat(dimensao[0]) + "\n");
+                        retangulo.append("*".repeat(dimensao[0])).append("\n");
                     else
-                        retangulo.append("*" + "\s".repeat(dimensao[0]-2) + "*\n");
+                        retangulo.append("*").append(" ".repeat(dimensao[0] - 2)).append("*\n");
                 }
+                IO.println("java AsciiArt " + tipo.toLowerCase() + " " + dimensao[0] + " " + dimensao[1] + "\n");
                 IO.println(retangulo);
 				break;
 			default: IO.println(respostaArgError);
-        };
+        }
     }
 }
 
