@@ -30,19 +30,18 @@ public class Main {
                         if(     orbLinha  < 0 || orbLinha  > map.length -1 ||
                                 orbColuna < 0 || orbColuna > map[linha].length-1) {continue;}
                         if(Character.isDigit(map[orbLinha][orbColuna])){
-                            map[orbLinha][orbColuna]++;
+                                map[orbLinha][orbColuna]++;
                         }
-                        else if(map[orbLinha][orbColuna] == '*' ){}
-                        else map[orbLinha][orbColuna] = '1';
+                        else if (map[orbLinha][orbColuna] != '*') {
+                                map[orbLinha][orbColuna] = '1';
+                        }
                     }
                 }
             }
         }
         IO.println();
         for (char[] linha : map){
-            for (char campo: linha){
-                IO.print(campo + " ");
-            }
+            for (char campo: linha){ IO.print(campo + " "); }
             IO.println();
         }
     }
