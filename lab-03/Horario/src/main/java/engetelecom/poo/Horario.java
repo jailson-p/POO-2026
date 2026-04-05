@@ -38,6 +38,7 @@ public class Horario {
     public StringBuilder porExtenso(){
         StringBuilder extenso= new StringBuilder();
         int[] horarioMatriz = new int[]{this.hora,70,this.minuto,80,this.segundo,90};
+        int valorAnterior = 0;
         for (int tempo : horarioMatriz) {
             if(tempo == 0) {
                 extenso.append("zero ");
@@ -48,7 +49,7 @@ public class Horario {
             for(int num : dezenaEunidade){
                 switch (num) {
                     case 0: extenso.append( tempo == 0 ? " zero": ""); break;
-                    case 1: extenso.append(" um ");         break;
+                    case 1: extenso.append(valorAnterior == 0 ? " uma ": " um ");         break;
                     case 2: extenso.append(" dois ");       break;
                     case 3: extenso.append(" três ");       break;
                     case 4: extenso.append(" quatro ");     break;
@@ -71,12 +72,13 @@ public class Horario {
                     case 30: extenso.append(" trinta ");    break;
                     case 40: extenso.append(" quarenta ");  break;
                     case 50: extenso.append(" cinquenta "); break;
-                    case 70: extenso.append(num != 1 ? "horas,": "hora,");       break;
-                    case 80: extenso.append(num != 1 ? "minutos e ":"minuto e"); break;
-                    case 90: extenso.append(num != 1 ? "segundos": "segundo");    break;
+                    case 70: extenso.append(valorAnterior != 1 ? "horas,": "hora,");       break;
+                    case 80: extenso.append(valorAnterior != 1 ? "minutos e":"minuto e"); break;
+                    case 90: extenso.append(valorAnterior != 1 ? "segundos": "segundo");    break;
                 }
                 extenso.append(num > 19 && dezenaEunidade[1] > 0 ? "e":"");
             }
+            valorAnterior = tempo;
         }
         return extenso;
     }
