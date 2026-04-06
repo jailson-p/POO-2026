@@ -36,10 +36,12 @@ public class Main {
         Conta conta = new Conta(titular,nConta,saldoInit);
         contas.add(conta);
     }
+    static void depositar
+
 
     static void main(String[] args) {
 
-
+        Main ksks ;
 
     }
 
