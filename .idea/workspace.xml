@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5154c7f6-ae5b-4d8c-b77b-dba1a60400ec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/aula-04/Segundo.java" beforeDir="false" afterPath="$PROJECT_DIR$/aula-04/Segundo.java" afterDir="false" />
+    <list default="true" id="5154c7f6-ae5b-4d8c-b77b-dba1a60400ec" name="Changes" comment="l;;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,9 +12,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "state": "OPEN",
+      "assignee": "jailson-p",
+      "author": "jailson-p"
+    }
+  ],
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "jailson-p",
+    "author": "jailson-p"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/jailson-p/POO-2026.git",
+    "accountId": "530ffd5f-a4d8-4aa9-b689-6debafba0ef9"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="3AO8heIZp4PHc2OgQnqbICvF1BN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -28,15 +48,14 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/aluno/Documentos/POO-2026",
+    "last_opened_file_path": "C:/Users/I5 6500/Desktop/poo/POO-2026",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.138" />
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
       </set>
     </attachedChunks>
   </component>
@@ -49,9 +68,22 @@
       <updated>1772452380732</updated>
       <workItem from="1772452385866" duration="758000" />
     </task>
+    <task id="LOCAL-00001" summary="l;;">
+      <option name="closed" value="true" />
+      <created>1775354009235</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1775354009235</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="l;;" />
+    <option name="LAST_COMMIT_MESSAGE" value="l;;" />
   </component>
 </project>
